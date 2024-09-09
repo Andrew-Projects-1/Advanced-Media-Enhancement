@@ -1,3 +1,13 @@
+# Andrew Moskowitz
+##
+# This program is designed to analyze and identify the emotional state of a person or persons in an input image. 
+# Using advanced facial recognition techniques and emotion classification algorithms, the program 
+# detects key facial landmarks (such as eyes, mouth, and eyebrows) and analyzes subtle changes in 
+# facial expressions. These expressions are then classified into common emotional categories such as 
+# happiness, sadness, anger, surprise, fear, and neutrality. Once the emotion is identified, the program 
+# provides feedback by displaying the detected emotion directly on the image, alongside the person's face. 
+##
+
 import cv2
 import face_recognition
 from fer import FER
