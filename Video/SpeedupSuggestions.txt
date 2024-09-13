@@ -1,0 +1,13 @@
+1. **Use a faster face recognition library**: The `face_recognition` library is quite slow. You can try using a faster library like `dlib` or `deepface`.
+
+3. **Reduce the number of times the face recognition model is run**: The face recognition model is being run for each face in the frame. You can reduce the number of times the model is run by only running it on faces that are close to the camera (i.e., faces that are larger in the frame).
+
+5. **Optimize the code for better memory usage**: The code is currently storing all the frames in memory at once. This can be a problem if the video file is large. You can optimize the code to process one frame at a time instead of storing all the frames in memory at once.
+
+6. **Use a faster way to remove duplicates and unknowns**: The `removeDuplicatesAndUnknown` function is being run after the video is processed. However, this function can be run in parallel with the video processing. You can use Python's `multiprocessing` module to run this function in a separate process while the video is being processed.
+
+7. **Use a faster way to write to the file**: The `with open('found_people.txt', 'a') as f:` line is being run for each face in the frame. This can be slow. You can use a faster way to write to the file, such as using a `StringIO` object to write to a string in memory, and then writing the string to the file once at the end of the video processing.
+
+8. **Optimize the code for better cache usage**: The code is currently using a lot of memory, which can cause the CPU cache to be thrashed. You can optimize the code to use less memory, which can improve the performance of the code.
+
+
